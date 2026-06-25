@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MC Samm Studios</title>
+  <link rel="stylesheet" href="samm.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loader -->
+  <div id="loader">Loading...</div>
+    <div class="spinner"></div>
+  </div>
+<header class="navbar">
+  <div class="logo">MC Samm Studios</div>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#booking">Booking</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#comments">Comments</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Main Content -->
+  
+
+  <!-- Back to Top Button -->
+  <button id="backToTop">Back to Top</button>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <video autoplay muted loop class="bg-video">
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>MC Samm Studios</h1>
+      <p>Capturing Moments. Creating Timeless Memories.</p>
+      <div class="hero-buttons">
+        <a href="#booking" class="btn">Book a Session</a>
+        <a href="#gallery" class="btn gold">View Gallery</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">↓</div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>MC Samm Studios is a premium creative brand specializing in capturing unforgettable moments through photography and videography. Our mission is to transform fleeting moments into timeless memories with cinematic artistry.</p>
+      <div class="counters">
+        <div class="counter" data-target="500">All</div><span>Happy Clients</span>
+        <div class="counter" data-target="1200">35</div><span>Projects Completed</span>
+        <div class="counter" data-target="10">10</div><span>Years Experience</span>
+      </div>
+    </div>
+    <div class="about-img"></div>
+  </section>
+
+  <section id="services" class="services">
+  <h2>Our Services</h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <img src="video.jpg" alt="Video coverage">
+      <h3>Video Coverage</h3>
+      <p>Professional cinematic video coverage for weddings, events, and productions.</p>
+    </div>
+    <div class="service-card">
+      <img src="girl.webp" alt="Photography">
+      <h3>Photography</h3>
+      <p>Luxury photography capturing timeless memories with artistic precision.</p>
+    </div>
+    <div class="service-card">
+      <img src="photoshoot.jpg" alt="Photoshoots">
+      <h3>Photoshoots</h3>
+      <p>Creative studio and outdoor photoshoots tailored to your style.</p>
+    </div>
+    <div class="service-card">
+      <img src="premium photo-editing.avif" alt="Photo Editing">
+      <h3>Photo Editing</h3>
+      <p>High-end retouching and editing for flawless, professional results.</p>
+    </div>
+    <div class="service-card">
+      <img src="edit video.jpg" alt="Video Editing">
+      <h3>Video Editing</h3>
+      <p>Seamless editing with cinematic transitions and storytelling.</p>
+    </div>
+    <div class="service-card">
+      <img src="mc.jpg" alt="MC Services">
+      <h3>MC Services</h3>
+      <p>Engaging master of ceremonies to elevate your event experience.</p>
+    </div>
+    <div class="service-card">
+      <img src="makeup.jpg" alt="Makeup Services">
+      
+      <p>Professional makeup artistry for weddings, shoots, and events.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Portfolio</h2>
+    <div class="gallery-grid">
+      <img src="https://picsum.photos/400/300?random=1" alt="">
+      <img src="https://picsum.photos/400/300?random=2" alt="">
+      <img src="https://picsum.photos/400/300?random=3" alt="">
+      <img src="https://picsum.photos/400/300?random=4" alt="">
+      <img src="https://picsum.photos/400/300?random=5" alt="">
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking" class="booking">
+    <h2>Book a Session</h2>
+    <form id="bookingForm">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="text" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option>Video Coverage</option>
+        <option>Photography</option>
+        <option>Photoshoots</option>
+        <option>Photo Editing</option>
+        <option>Video Editing</option>
+        <option>MC Services</option>
+        <option>Makeup Services</option>
+      </select>
+      <input type="date" name="date" required>
+      <textarea name="message" placeholder="Message"></textarea>
+      <button type="submit" class="btn gold">Submit</button>
+    </form>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial">⭐️⭐️⭐️⭐️⭐️ "Amazing work!" - Jane</div>
+      <div class="testimonial">⭐️⭐️⭐️⭐️⭐️ "Captured our wedding perfectly." - David</div>
+      <div class="testimonial">⭐️⭐️⭐️⭐️⭐️ "Professional and creative." - Sarah</div>
+    </div>
+  </section>
+
+  <section id="comments" class="comments">
+  <h2>Leave a Comment</h2>
+  <p class="comment-intro">We value your thoughts — share your experience with MC Samm Studios.</p>
+  
+  <div class="comment-box">
+    <form id="commentForm">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="comment">Your Comment</label>
+        <textarea id="comment" name="comment" placeholder="Write your comment..." required></textarea>
+      </div>
+      <button type="submit" class="btn gold">Submit Comment</button>
+    </form>
+  </div>
+
+  <div id="commentList" class="comment-list">
+    <!-- Dynamic comments will appear here -->
+  </div>
+</section>
+
+  <section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p class="contact-intro">We’d love to hear from you. Reach out for bookings, collaborations, or inquiries.</p>
+
+  <div class="contact-container">
+    <!-- Contact Info Cards -->
+    <div class="contact-info">
+      <div class="info-card">
+        <h3>📞 Phone</h3>
+        <p>09027694575</p>
+      </div>
+      <div class="info-card">
+        <h3>📧 Email</h3>
+        <p><a href="mailto:successakogun5@gmail.com">successakogun5@gmail.com</a></p>
+      </div>
+      <div class="info-card">
+        <h3>📍 Address</h3>
+        <p>Opposite Adeyi Primary School, Kodape Auta</p>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="cname">Full Name</label>
+          <input type="text" id="cname" name="cname" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="cemail">Email</label>
+          <input type="email" id="cemail" name="cemail" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="cmessage">Message</label>
+          <textarea id="cmessage" name="cmessage" placeholder="Write your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn gold">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Map Placeholder -->
+  <div class="map">[Google Map Placeholder]</div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
