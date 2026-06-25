@@ -1,0 +1,701 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: absolute;
+  top:50%; left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: gold;
+  animation: fadeIn 2s ease;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid gold;
+  background: transparent;
+  color: gold;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: gold;
+  color: black;
+}
+
+.service-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid gold;
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px gold;
+}
+/* Logo animation */
+.navbar .logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: gold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0;                /* start hidden */
+  transform: translateY(-20px);
+  animation: logoFadeIn 1.5s ease forwards;
+  animation-delay: 0.5s;     /* slight delay after page load */
+}
+
+@keyframes logoFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+/* Booking Section Styling */
+.booking {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #000 0%, #111 100%);
+  text-align: center;
+}
+
+.booking h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: gold;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#bookingForm {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#bookingForm input,
+#bookingForm select,
+#bookingForm textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid gold;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  color: white;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus,
+#bookingForm textarea:focus {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 15px gold;
+}
+
+#bookingForm textarea {
+  grid-column: span 2; /* make message box full width */
+  min-height: 120px;
+  resize: none;
+}
+
+#bookingForm button {
+  grid-column: span 2;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: gold;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#bookingForm button:hover {
+  background: #fff;
+  color: gold;
+  box-shadow: 0 0 20px gold;
+}
+/* About Section */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 50px;
+  background: linear-gradient(180deg, #000 0%, #111 100%);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  color: white;
+}
+
+.about-text h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: gold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.counters {
+  display: flex;
+  gap: 40px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: gold;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255,215,0,0.3);
+  transition: transform 0.5s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+.services {
+  padding: 100px 50px;
+  background: #000;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: gold;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.service-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid gold;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(255,215,0,0.3);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px gold;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Logo */
+.navbar .logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: gold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px gold;
+}
+
+/* Horizontal Menu */
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* spacing between links */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+  color: gold;
+  text-shadow: 0 0 10px gold;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Logo */
+.navbar .logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.6rem;
+  color: gold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 15px gold;
+}
+
+/* Horizontal Menu */
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* spacing between links */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+  color: gold;
+  text-shadow: 0 0 10px gold;
+}
+ 
+/* Comments Section */
+.comments {
+  padding: 100px 50px;
+  background: linear-gradient(180deg, #000 0%, #111 100%);
+  text-align: center;
+}
+
+.comments h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: gold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.comment-intro {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 40px;
+}
+
+.comment-box {
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid gold;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: gold;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid gold;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 15px gold;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.comment-list {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.comment-list .comment-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid gold;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.comment-list .comment-item h4 {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.comment-list .comment-item p {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Contact Section */
+.contact {
+  padding: 100px 50px;
+  background: linear-gradient(180deg, #000 0%, #111 100%);
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: gold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact-intro {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 50px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Info Cards */
+.info-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid gold;
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card h3 {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px gold;
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.contact-form form {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid gold;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: left;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  color: gold;
+  margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid gold;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 15px gold;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: gold;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #fff;
+  color: gold;
+  box-shadow: 0 0 20px gold;
+}
+
+/* Map Placeholder */
+.map {
+  margin-top: 50px;
+  height: 300px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid gold;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ddd;
+  font-size: 1.2rem;
+}
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  /* Hero Section */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Services Grid */
+  .service-grid {
+    grid-template-columns: 1fr; /* stack services vertically */
+  }
+
+  .service-card img {
+    height: 150px;
+  }
+
+  /* About Section */
+  .about {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  /* Contact Section */
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Comments Section */
+  .comment-box {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .logo {
+    font-size: 1.2rem;
+  }
+
+  .services h2,
+  .about h2,
+  .contact h2,
+  .comments h2 {
+    font-size: 2rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
+}
